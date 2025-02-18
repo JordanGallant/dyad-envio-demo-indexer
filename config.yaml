@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: dyad
+networks:
+- id: 1
+  start_block: 0
+  contracts:
+  - name: Dyad
+    address:
+    - 0xFd03723a9A3AbE0562451496a9a394D2C4bad4ab
+    handler: src/EventHandlers.ts
+    events:
+    - event: Approval(address indexed owner, address indexed spender, uint256 amount)
+    - event: Transfer(address indexed from, address indexed to, uint256 amount)
+rollback_on_reorg: false

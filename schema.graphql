@@ -1,0 +1,14 @@
+type Dyad_Approval {
+  id: ID!
+  owner: String!
+  spender: String!
+  amount: BigInt!
+}
+
+type Dyad_Transfer {
+  id: ID!
+  from: String!
+  to: String!
+  amount: BigInt!
+}
+
